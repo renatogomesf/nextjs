@@ -1,4 +1,12 @@
 // todo arquivo dentro de app o next interpreta como página.
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  // ignora o "default" e o "template" e poe titulo que estiver no absolute. mas só funciona na página que o absolute estiver definido.
+  //absolute: "teste de texto",
+
+  title: "Produtos",
+};
 
 export default function Products() {
   return (
