@@ -1,9 +1,15 @@
 import { data } from "../data";
 
+import { redirect } from "next/navigation"; // redireciona para outra página
+
 export async function GET(
   request: Request,
   { params }: { params: { id: string } }
 ) {
+  if (parseInt(params.id) > data.length) {
+    redirect("/aula14a20/names");
+  }
+
   const name = data.find((name) => name.id === parseInt(params.id));
 
   return Response.json(name);

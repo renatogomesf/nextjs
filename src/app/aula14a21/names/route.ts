@@ -1,4 +1,4 @@
-import { NextRequest } from "next/server";
+import { NextRequest } from "next/server"; // da acesso aos dados numa url
 import { data } from "./data";
 
 // export async function GET() {
