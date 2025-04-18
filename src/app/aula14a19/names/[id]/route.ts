@@ -23,3 +23,16 @@ export async function PATCH(
 
   return Response.json(data[index]);
 }
+
+export async function DELETE(
+  request: Request,
+  { params }: { params: { id: string } }
+) {
+  const index = data.findIndex((user) => user.id === parseInt(params.id));
+
+  const deleteUser = data[index];
+
+  data.splice(index, 1);
+
+  return Response.json(deleteUser);
+}
