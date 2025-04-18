@@ -8,7 +8,7 @@ import { data } from "./data";
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
 
-  const query = searchParams.get("name");
+  const query = searchParams.get("name"); // "get" para selecionar um dado específico
 
   const filteredNames = query
     ? data.filter((name) => name.name.includes(query))
